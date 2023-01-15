@@ -7,4 +7,17 @@
 ##### Install
 
 ```
- pkg install python 
+ $ pkg update && pkg upgrade
+ $ pkg install python git
+ $ pip install requests bs4 futures
+ $ pip install rich
+ $ git clone https://github.com/Xyaa-Code/BACEM
+ ```
+
+##### Run
+
+```
+cd BACEM
+git pull
+python run.py
+```
