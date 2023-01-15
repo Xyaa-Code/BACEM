@@ -21,3 +21,6 @@ cd BACEM
 git pull
 python run.py
 ```
+
+###### hasil crack
+![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/IMG_20230115_165503.jpg)
