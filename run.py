@@ -142,7 +142,7 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
               uid = console.input(f' {P2}({H2}•{P2}) masukan id akun : ')
               for c in uid.split(','):
                   try:
-                      url = requests.get("https://graph.facebook.com/v15.0/{}?fields=id,name,friends.limit(500)&access_token={}".format(c,tok),cookies=cok).json()
+                      url = requests.get("https://graph.facebook.com/v15.0/{}?fields=id,name,friends.limit(5000)&access_token={}".format(c,tok),cookies=cok).json()
                       for x in url["friends"]["data"]:
                           ID.append(x["id"]+'<=>'+x["name"])
                           print(f'\r {P}({H}•{P}) berhasil dump {R}{len(ID)} {P}id',end=" ")
