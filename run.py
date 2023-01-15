@@ -343,6 +343,8 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
         loop +=1
 
 if __name__ == '__main__':
+   try:os.system('git pull')
+   except:pass
    try:os.mkdir('results')
    except:pass
    try:os.mkdir('data')
