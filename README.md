@@ -20,9 +20,9 @@ don't forget to give a star ⭐
 ##### Run
 
 ```
-cd BACEM
-git pull
-python run.py
+ $ cd BACEM
+ $ git pull
+ $ python run.py
 ```
 
 ###### hasil crack
