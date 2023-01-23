@@ -88,7 +88,11 @@ class login:
          return timenow
 
     def logoku(self):
-        prints(Panel(f"""\n{RC}d8888b.  .d8b.   .o88b. d88888b .88b  d88. 
+        try:
+           os.popen('play-audio data/sound/logo.mp3')
+        except:
+           pass
+prints(Panel(f"""\n{RC}d8888b.  .d8b.   .o88b. d88888b .88b  d88. 
 88  `8D d8' `8b d8P  Y8 88'     88'YbdP`88  {P2}* Tempe Bacem ({RC}MBF{P2}){RC}
 88oooY' 88ooo88 8P      88ooooo 88  88  88  {P2}* Free {RC}For {P2}Everyone {RC}
 88~~~b. 88~~~88 8b      88~~~~~ 88  88  88
@@ -144,6 +148,10 @@ class MulaiTools:
     
     def logoos(self):
         self.clear()
+        try:
+           os.popen('play-audio data/sound/logo.mp3')
+        except:
+           pass
         prints(Panel(f"""\n{RC}d8888b.  .d8b.   .o88b. d88888b .88b  d88. 
 88  `8D d8' `8b d8P  Y8 88'     88'YbdP`88  {P2}* Tempe Bacem ({RC}MBF{P2}){RC}
 88oooY' 88ooo88 8P      88ooooo 88  88  88  {P2}* Free {RC}For {P2}Everyone {RC}
