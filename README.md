@@ -1,10 +1,8 @@
-![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/Bacem%20MBF%20FREE%20AND%20OPEN%20SOURCE.png)
 
 
 ###### TEMPE BACEM (MBF) 
 ```
-Free and Open Source
-don't forget to give a star ⭐
+Free, don't forget to give a star ⭐
 ```
 
 ###### Install
