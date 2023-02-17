@@ -4,9 +4,8 @@
  ```
  $ pkg update && pkg upgrade
  $ pkg install python git
- $ pkg install play-audio
  $ pip install requests bs4 futures
- $ rm -rf BruteIG
+ $ rm -rf BACEM
  $ git clone https://github.com/Xyaa-Code/BACEM
  ```
  oke sekarang script sudah terinstall
