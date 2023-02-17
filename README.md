@@ -23,7 +23,7 @@
 ![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/IMG_20230217_141254.jpg)
 
 ##### HASIL CRACK:
-![template_s]()
+![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/IMG_20230217_181436.jpg)
 
 ##### info:
  untuk versi sekarang hanya support di perangkat yang *aarch64* untuk mengecek
