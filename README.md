@@ -22,6 +22,9 @@
 ##### MENU BOT:
 ![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/IMG_20230217_141254.jpg)
 
+##### HASIL CRACK:
+![template_s]()
+
 ##### info:
  untuk versi sekarang hanya support di perangkat yang *aarch64* untuk mengecek
  ketik perintah ini : ```uname -m``` jika muncul *aarch64* selamat anda bisa menggunakan script ini,
