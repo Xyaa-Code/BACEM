@@ -16,11 +16,11 @@
   $ git pull
   $ python run.py
  ```
-#### TAMPILAN MENU:
-![template_s]()
+##### TAMPILAN MENU:
+![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/IMG_20230217_141313.jpg)
 
-#### RESULTS:
-![template_s]()
+##### MENU BOT:
+![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/IMG_20230217_141254.jpg)
 
 ##### info:
  untuk versi sekarang hanya support di perangkat yang *aarch64* untuk mengecek
