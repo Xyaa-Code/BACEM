@@ -1,34 +1,35 @@
 
-
-###### TEMPE BACEM (MBF) 
-
-
-###### Install
-
-```
+#### CARA INSTALL SCRIPT:
+ download aplikasi termux android di [sini!](https://f-droid.org/repo/com.termux_117.apk), lalu buka aplikasinya ketikan perintah dibawah ini.
+ ```
  $ pkg update && pkg upgrade
  $ pkg install python git
- $ pkg install play-audio 
+ $ pkg install play-audio
  $ pip install requests bs4 futures
- $ pip install rich
+ $ rm -rf BruteIG
  $ git clone https://github.com/Xyaa-Code/BACEM
  ```
+ oke sekarang script sudah terinstall
+##### CARA MENJALANKAN SCRIPT:
+ sekarang karena script sudah diinstall tinggal kita jalankan, ketikan perintah dibawah ini:
+ ```
+  $ cd BACEM
+  $ git pull
+  $ python run.py
+ ```
+#### TAMPILAN MENU:
+![template_s]()
 
-###### Run Script
+#### RESULTS:
+![template_s]()
 
-```
- $ cd BACEM
- $ git pull
- $ python run.py
-```
+##### info:
+ untuk versi sekarang hanya support di perangkat yang *aarch64* untuk mengecek
+ ketik perintah ini : ```uname -m``` jika muncul *aarch64* selamat anda bisa menggunakan script ini,
+ oh iya script ini juga cuma bisa dijalanin dipython versi 3.11 untuk mengecek versi python
+ ketik perintah ini : ```python --version```
 
-###### Tampilan Menu
-![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/Screenshot_2023-01-25-16-59-05-06_84d3000e3f4017145260f7618db1d683.jpg)
+##### catatan:
+ gunakanlah dengan bijak, atas apapun yang terjadi admin tidak bertanggung jawab.
 
-###### hasil crack
-![template_s](https://github.com/Xyaa-Code/BACEM/blob/main/data/img/IMG_20230124_221908.jpg)
-
-###### my contact
-[![](https://img.shields.io/badge/Facebook-blue?logo=Facebook&logoColor=blue&labelColor=white)](https://www.facebook.com/Aditya.putraXD991)
-[![](https://img.shields.io/badge/Whatsapp-CHAT-red?logo=Whatsapp&logoColor=Brightgreen&labelColor=white)](https://wa.me/+16143244921)
-[![](https://img.shields.io/badge/Instagram-Blue?logo=Instagram&logoColor=blue&labelColor=white)](https://www.instagram.com/xyaacode)<br><br>
+###### Thanks for [Xyaa-Code](https://github.com/Xyaa-Code) and [AdtyaXC](https://github.com/AdtyaXC)
